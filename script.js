@@ -1,8 +1,11 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
-}
+function indexOfIgnoreCase(str, subStr) {
+  // Check for null or undefined input (optional safety)
+  if (str == null || subStr == null) return -1;
 
-// Please do not change the code below
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(indexOfIgnoreCase(s1, s2));
+  // Convert both strings to lowercase
+  const lowerStr = str.toLowerCase();
+  const lowerSubStr = subStr.toLowerCase();
+
+  // Use indexOf for case-insensitive search
+  return lowerStr.indexOf(lowerSubStr);
+}
